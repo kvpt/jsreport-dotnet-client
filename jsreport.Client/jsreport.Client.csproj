@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
+    <TargetFrameworks>net45;netstandard2.0;net6.0</TargetFrameworks>
     <PackageId>jsreport.Client</PackageId>
     <Title>jsreport Client</Title>
     <Authors>Jan Blaha</Authors>
@@ -8,16 +8,16 @@
     <PackageProjectUrl>http://jsreport.net</PackageProjectUrl>
     <PackageLicenseUrl>http://www.opensource.org/licenses/mit-license.php</PackageLicenseUrl>
     <PackageIconUrl>http://jsreport.net/img/favicon.ico</PackageIconUrl>
-    <Copyright>Copyright 2013-2022 Jan Blaha</Copyright>
+    <Copyright>Copyright 2013-2024 Jan Blaha</Copyright>
     <PackageTags>jsreport;report;pdf</PackageTags>
     <RepositoryUrl>https://github.com/jsreport/net</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Version>3.8.1</Version>
-    <AssemblyVersion>3.8.1</AssemblyVersion>
+    <Version>3.8.2</Version>
+    <AssemblyVersion>3.8.2.0</AssemblyVersion>
     <Company>jsreport</Company>
     <PackageReleaseNotes>Release notes are at https://github.com/jsreport/jsreport-dotnet-client/releases</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <FileVersion>3.8.1.0</FileVersion>
+    <FileVersion>3.8.2.0</FileVersion>
     <PackageIcon>icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
@@ -31,9 +31,8 @@
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
-  <ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
     <PackageReference Include="Microsoft.CSharp" Version="4.4.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.Net.Http" Version="4.3.4" />
   </ItemGroup>
 
@@ -46,8 +45,7 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <PackageReference Include="jsreport.Types" Version="3.8.1" />        
-        <PackageReference Include="jsreport.Shared" Version="3.8.0" />
+        <PackageReference Include="jsreport.Shared" Version="3.8.3" />
       </ItemGroup>
     </Otherwise>
   </Choose>

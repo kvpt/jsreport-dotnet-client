@@ -5,10 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.0" />
-    <PackageReference Include="NUnit" Version="3.13.3" />
-    <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
-    <PackageReference Include="Shouldly" Version="4.0.3" />    
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="NUnit" Version="4.2.2" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
+    <PackageReference Include="Shouldly" Version="4.2.1" />    
   </ItemGroup>  
 
   <Choose>
@@ -24,8 +24,8 @@
     <Otherwise>
       <ItemGroup>
         <ProjectReference Include="..\jsreport.Client\jsreport.Client.csproj" />
-        <PackageReference Include="jsreport.Local" Version="2.3.2" />
-        <PackageReference Include="jsreport.Binary" Version="3.8.0" />        
+        <PackageReference Include="jsreport.Local" Version="3.8.2" />
+        <PackageReference Include="jsreport.Binary" Version="4.4.0" />        
       </ItemGroup>
     </Otherwise>
   </Choose>
